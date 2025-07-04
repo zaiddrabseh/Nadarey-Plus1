@@ -295,7 +295,7 @@
             display: flex;
             margin-bottom: 30px;
             padding-bottom: 25px;
-            border-bottom: 1px solid rgba(0,0,0,0.08);
+            border-bottom: 1px dashed #ddd;
         }
         
         .review:last-child {
@@ -756,7 +756,7 @@
             <p>ادفع مرة واحدة واحصل على ملف الأسئلة الكامل فوراً</p>
             
             <!-- حاوية زر PayPal الجديد -->
-            <div id="paypal-container-ACERV4KYZ2YZ2" style="margin: 30px auto; max-width: 350px;"></div>
+            <div id="paypal-container-BG929CV6MJN4Y"></div>
             
             <div class="payment-methods">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="فيزا">
@@ -888,7 +888,7 @@
 
         // تهيئة أزرار PayPal الجديدة
         paypal.HostedButtons({
-            hostedButtonId: "ACERV4KYZ2YZ2",
+            hostedButtonId: "BG929CV6MJN4Y",
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     // عند اكتمال الدفع
@@ -915,12 +915,12 @@
                 console.error('حدث خطأ في الدفع:', err);
                 alert('حدث خطأ أثناء عملية الدفع. يرجى المحاولة مرة أخرى أو التواصل مع الدعم الفني.');
             }
-        }).render("#paypal-container-ACERV4KYZ2YZ2");
+        }).render("#paypal-container-BG929CV6MJN4Y");
 
         // دالة تنزيل الملف
         function triggerDownload() {
             // هنا رابط ملف الوورد الفعلي
-            const fileUrl = "كورس نضري bluse.pdf";
+            const fileUrl = "bluse.pdf";
             
             // إنشاء عنصر a خفي للتنزيل
             const a = document.createElement('a');
